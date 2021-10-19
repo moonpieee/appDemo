@@ -1,0 +1,28 @@
+<section class="container-fluid p-0">
+    <div class="row">
+        <ng-container *ngIf="isNotEmpty;else noNotesAvailable">
+            <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let note of listOfNotes;let i = index">
+                <div class="card card-custom-height my-3">
+                    <div class="icon-delete-wrapper position-relative" (click)="deleteNote(i)">
+                        <img class="icon-delete-note" src=".../../../../../assets/images/trash.svg" alt="Delete Tag" />
+                    </div>
+                    <div class="card-body text-color-primary">
+                        <h5 class="card-title">{{note.createdOn}}</h5>
+                        <hr class="separator"/>
+                        <p class="card-text">
+                            {{note.message}}</p>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <ng-template #noNotesAvailable>
+        <div class="col-12 text-center text-color-primary mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="mb-0">No Quick Notes Found !!</h4>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</section>

@@ -1,0 +1,28 @@
+.card-custom-height{
+ max-height: 240px;
+}
+
+.icon-delete-wrapper{
+    img{
+        padding: 4px;
+        position: absolute;
+        right: -1px;
+        top: -15px;
+        background-color: orange;
+        border-radius: 4em;
+        z-index: 1;
+        border: solid 4px #fff;
+        cursor: pointer;
+    }
+}
+
+.message-timestamp{
+    background-color: #ff6a13;
+    color: #ffffff;
+    padding: 2px;
+    text-align: center;
+}
+
+.separator{
+    border-top:1px solid #ff6a13;
+}

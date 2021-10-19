@@ -1,0 +1,26 @@
+<form [formGroup]="notesForm">
+    <div class="form-row">
+        <div class="col-9">
+            <div class="form-group">
+                <input type="text" row="2" class="form-control input-custom-height w-100" id="messsageBox"
+                    placeholder="Enter your Message..." formControlName="noteTag" />
+                <div class="text-white"
+                    *ngIf="formControlNoteTag.invalid && (formControlNoteTag.dirty || formControlNoteTag.touched)">
+                    <small *ngIf="formControlNoteTag.errors.required">
+                        {{errorMessages.required}}
+                    </small>
+                    <small *ngIf="formControlNoteTag.errors.minlength">
+                        {{errorMessages.minlength}}
+                    </small>
+                    <small *ngIf="formControlNoteTag.errors.maxlength">
+                        {{errorMessages.maxlength}}
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <button type="submit" class="btn button-primary btn-block pointer" [disabled]="notesForm.invalid"
+                (click)="submitNote()">Submit</button>
+        </div>
+    </div>
+</form>

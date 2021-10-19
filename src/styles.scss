@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+*{
+    font-family: 'Libre Franklin', sans-serif;
+}
+html body{
+    background: linear-gradient(90deg,#ff6a13 0%,#fbdb21 100%);
+    color: #ffffff;
+    padding-top: 100px;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.text-color-primary{
+    color:  #ff6a13;
+}
+
+.text-color-secondary{
+    color:  #fff;
+}
+
+.background-color-primary{
+    background-color:  #ff6a13;
+}
+
+.background-color-secondary{
+    background-color:  #fff;
+}
+
+.button-primary{
+    text-align: center;
+    background-color: #ff6a13;
+    border-color: #ff6a13;
+    color: #ffffff;
+    line-height: 48px;
+
+    &:hover{
+        color: #ffffff;
+    }
+}
+
+.button-secondary{
+    text-align: center;
+    background-color: #fff;
+    border-color: #fff;
+    color: #ff6a13;;
+    line-height: 48px;
+    &:hover{
+        color: #ffffff;
+    }
+}
